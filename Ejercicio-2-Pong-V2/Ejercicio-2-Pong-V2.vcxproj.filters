@@ -24,10 +24,14 @@
     <ClCompile Include="src\Screens\GameOver.cpp">
       <Filter>Screens</Filter>
     </ClCompile>
-    <ClCompile Include="Pong-V2.cpp" />
     <ClCompile Include="src\Screens\Menu.cpp">
       <Filter>Screens</Filter>
     </ClCompile>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Objects\PowerUps.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Objects\Textures.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Objects\Ball.h">
@@ -48,5 +52,9 @@
     <ClInclude Include="src\Screens\Menu.h">
       <Filter>Screens</Filter>
     </ClInclude>
+    <ClInclude Include="src\Objects\PowerUps.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Objects\Textures.h" />
   </ItemGroup>
 </Project>

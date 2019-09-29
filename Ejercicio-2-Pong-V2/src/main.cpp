@@ -8,10 +8,10 @@
 *   Copyright (c) 2014 Ramon Santamaria (@raysan5)
 *
 ********************************************************************************************/
-
 #include "ExecuteGame.h"
-int main(void) {
 
+int main(void) 
+{
 	ExecuteGame();
 	return 0;
 }

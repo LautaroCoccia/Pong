@@ -19,9 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Pong-V2.cpp" />
+    <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Objects\Ball.cpp" />
     <ClCompile Include="src\Objects\Palettes.cpp" />
+    <ClCompile Include="src\Objects\PowerUps.cpp" />
+    <ClCompile Include="src\Objects\Textures.cpp" />
     <ClCompile Include="src\Screens\ExecuteGame.cpp" />
     <ClCompile Include="src\Screens\Game.cpp" />
     <ClCompile Include="src\Screens\GameOver.cpp" />
@@ -30,6 +32,8 @@
   <ItemGroup>
     <ClInclude Include="src\Objects\Ball.h" />
     <ClInclude Include="src\Objects\Palette.h" />
+    <ClInclude Include="src\Objects\PowerUps.h" />
+    <ClInclude Include="src\Objects\Textures.h" />
     <ClInclude Include="src\Screens\ExecuteGame.h" />
     <ClInclude Include="src\Screens\Game.h" />
     <ClInclude Include="src\Screens\GameOver.h" />
@@ -103,6 +107,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)\Ejercicio-2-Pong-V2\src\Objects;$(SolutionDir)Ejercicio-2-Pong-V2\src\Screens;$(SolutionDir)\Librerias\raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)\Librerias\raylib-2.5.0-Win32-msvc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -126,7 +131,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Ejercicio-2-Pong-V2\src\Objects;$(SolutionDir)Ejercicio-2-Pong-V2\src\Screens;$(SolutionDir)\Librerias\raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Ejercicio-2-Pong-V2\Textures;$(SolutionDir)\Ejercicio-2-Pong-V2\src\Objects;$(SolutionDir)Ejercicio-2-Pong-V2\src\Screens;$(SolutionDir)\Librerias\raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -134,7 +139,7 @@
       <AdditionalLibraryDirectories>$(SolutionDir)\Librerias\raylib-2.5.0-Win32-msvc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;raylib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
-      <EntryPointSymbol>mianCRTStartup</EntryPointSymbol>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

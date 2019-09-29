@@ -2,21 +2,25 @@
 #define BALL_H
 #include "raylib.h"
 
-struct Ball {
-	float ballMovementX = 500.0f;
-	float ballMovementY = 400.0f;
-	float ballSize = 12.0f;
-	Vector2 ballPosition;
-	Vector2 ballSpeed;
-	Color ballColor = WHITE;
-	bool ballDirection;
-};
-
-extern Ball ball;
-extern  bool checkColission;
-void InitBall();
-void CheckBallWallsLimit();
-void CheckColisionWithPlayers();
-void DrawMyBall();
+namespace BallObj
+{
+	struct Ball
+	{
+		float ballMovementX = 500.0f;
+		float ballMovementY = 400.0f;
+		float ballRadius = 16.0f;
+		Vector2 ballPosition;
+		Vector2 ballSpeed;
+		Color ballColor = WHITE;
+		bool ballDirection;
+	};
+	extern Ball ball;
+	extern  bool checkColission;
+	extern const float increaseMovementX;
+	void InitBall();
+	void CheckBallWallsLimit();
+	void DrawMyBall();
+	void SetBallAspectRatio();
+}
 #endif // !BALL_H
 

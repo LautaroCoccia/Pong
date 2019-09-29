@@ -1,17 +1,21 @@
 #include "Menu.h"
+
 #include "raylib.h"
-#include "Palette.h"
+
+#include <iostream>
+
 #include "Game.h"
-void DrawMenu();
-void CheckColorInput();
-void UpdateMenu();
+#include "Palette.h"
+
+static void DrawMenu();
+static void CheckColorInput();
+static void UpdateMenu();
 void RunMenu()
 {
 	UpdateMenu();
 }
 static void DrawMenu()
 {
-
 	ClearBackground(BLACK);
 	DrawText("PONG", 360, 50, 20, RAYWHITE);
 	DrawText("PRESS ENTER", 310, 125, 20, RAYWHITE);
@@ -40,8 +44,8 @@ static void CheckColorInput()
 }
 void UpdateMenu() 
 {
+	// Check Input and Update
 	//----------------------------------------------------------
-	// CHEQUEO DE INPUT y actualizado 
 	CheckColorInput();
 	BeginDrawing();
 	DrawMenu();
