@@ -1,60 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Archivos de origen">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{63bea78d-1010-4060-957e-886d9652f640}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de encabezado">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Archivos de recursos">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Screens">
+      <UniqueIdentifier>{6c867a63-7e82-4523-9714-8db2dd77ea2a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Pong-V2.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="src\Objects\Ball.cpp">
+      <Filter>Objects</Filter>
     </ClCompile>
-    <ClCompile Include="Menu.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="src\Objects\Palettes.cpp">
+      <Filter>Objects</Filter>
     </ClCompile>
-    <ClCompile Include="Palettes.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="src\Screens\ExecuteGame.cpp">
+      <Filter>Screens</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="src\Screens\Game.cpp">
+      <Filter>Screens</Filter>
     </ClCompile>
-    <ClCompile Include="Ball.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="src\Screens\GameOver.cpp">
+      <Filter>Screens</Filter>
     </ClCompile>
-    <ClCompile Include="GameOver.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="ExecuteGame.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="Pong-V2.cpp" />
+    <ClCompile Include="src\Screens\Menu.cpp">
+      <Filter>Screens</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Ball.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="src\Objects\Ball.h">
+      <Filter>Objects</Filter>
     </ClInclude>
-    <ClInclude Include="ExecuteGame.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="src\Objects\Palette.h">
+      <Filter>Objects</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="src\Screens\ExecuteGame.h">
+      <Filter>Screens</Filter>
     </ClInclude>
-    <ClInclude Include="GameOver.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="src\Screens\Game.h">
+      <Filter>Screens</Filter>
     </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="src\Screens\GameOver.h">
+      <Filter>Screens</Filter>
     </ClInclude>
-    <ClInclude Include="Palette.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="src\Screens\Menu.h">
+      <Filter>Screens</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
