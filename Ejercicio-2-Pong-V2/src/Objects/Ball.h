@@ -8,7 +8,8 @@ namespace BallObj
 	{
 		float ballMovementX = 500.0f;
 		float ballMovementY = 400.0f;
-		float ballRadius = 16.0f;
+		const float commonBallRadius =16;
+		float ballRadius = commonBallRadius;
 		Vector2 ballPosition;
 		Vector2 ballSpeed;
 		Color ballColor = WHITE;

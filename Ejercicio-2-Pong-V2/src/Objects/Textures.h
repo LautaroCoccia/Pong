@@ -4,6 +4,7 @@
 
 extern void loadPalettesTextures();
 extern void InitPalettesTextures();
+extern void InitBallTextures();
 extern void DrawPalettesTextures();
 extern void LoadBallTexture();
 extern void DrawBallTexture();

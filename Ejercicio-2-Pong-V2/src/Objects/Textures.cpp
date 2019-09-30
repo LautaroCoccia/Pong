@@ -5,7 +5,6 @@
 static Texture2D ballTexture;
 static Texture2D rightPalette;
 static Texture2D leftPalette;
-static void InitBallTextures();
 void loadPalettesTextures()
 {
 	rightPalette = LoadTexture("RightPalette.png");
@@ -34,7 +33,7 @@ void UnloadMyTextures()
 	UnloadTexture(rightPalette);
 }
 
-static void InitBallTextures()
+ void InitBallTextures()
 {
 	ballTexture.width = static_cast<int>(BallObj::ball.ballRadius + BallObj::ball.ballRadius);
 	ballTexture.height = static_cast<int>(BallObj::ball.ballRadius + BallObj::ball.ballRadius);

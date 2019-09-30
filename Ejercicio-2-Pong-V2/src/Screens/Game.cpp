@@ -12,7 +12,9 @@ static void UpdateGame();
 static void CheckWin();
 static void SetGameAspectRatio();
 static void CheckColisionBallPlayers();
-static void CheckColisionBallPowerUp();
+static void CheckColisionBallLargePalettePowerUp();
+static void CheckColisionBallLittleBallPowerUp();
+
 void RunGame()
 {
 	UpdateGame();
@@ -24,9 +26,11 @@ static void UpdateGame()
 	CheckPlayerMovement();
 	BallObj::CheckBallWallsLimit();
 	CheckColisionBallPlayers();
-	CheckColisionBallPowerUp();
+	CheckColisionBallLargePalettePowerUp();
+	CheckColisionBallLittleBallPowerUp();
 	ActivatePowerUp();
 	NormalizedHeight();
+	NormalizeBallRadius();
 
 	BeginDrawing();
 	ClearBackground(BLACK);
@@ -69,7 +73,7 @@ static void CheckColisionBallPlayers()
 	BallObj::ball.ballPosition.x += BallObj::ball.ballSpeed.x * GetFrameTime();
 	BallObj::ball.ballPosition.y += BallObj::ball.ballSpeed.y * GetFrameTime();
 }
-static void CheckColisionBallPowerUp()
+static void CheckColisionBallLargePalettePowerUp()
 {
 	if (largePalettePower.active && CheckCollisionCircles(BallObj::ball.ballPosition, BallObj::ball.ballRadius, largePalettePower.position, largePalettePower.ballRadius))
 	{
@@ -88,6 +92,15 @@ static void CheckColisionBallPowerUp()
 		void InitTimer();
 		largePalettePower.active = false;
 
+	}
+}
+static void CheckColisionBallLittleBallPowerUp()
+{
+	if (littleBall.active && CheckCollisionCircles(BallObj::ball.ballPosition, BallObj::ball.ballRadius, littleBall.position, littleBall.ballRadius))
+	{
+		ReduceBallRadius();
+		void InitTimer();
+		littleBall.active = false;
+
 	};
 }
-

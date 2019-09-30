@@ -12,11 +12,14 @@ struct PowerUp
 	bool active;
 };
 extern PowerUp largePalettePower;
+extern PowerUp littleBall;
 extern void InitPowerUp();
 extern void InitTimer();
 extern void ActivatePowerUp();
 extern void EnlargePaletteP1();
 extern void EnlargePaletteP2();
 extern void NormalizedHeight();
+extern void ReduceBallRadius();
+extern void NormalizeBallRadius();
 extern void DrawPowerUp();
 #endif
