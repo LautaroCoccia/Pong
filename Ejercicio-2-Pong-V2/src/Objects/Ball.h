@@ -15,13 +15,17 @@ namespace BallObj
 		Color ballColor = WHITE;
 		bool ballDirection;
 	};
+	extern Sound colisionSound;
 	extern Ball ball;
 	extern  bool checkColission;
 	extern const float increaseMovementX;
-	void InitBall();
-	void CheckBallWallsLimit();
-	void DrawMyBall();
-	void SetBallAspectRatio();
+	extern void UnloadMySound();
+	extern void InitBall();
+	extern void LoadColisionSound();
+	extern void CheckBallWallsLimit();
+	extern void DrawMyBall();
+	extern void SetBallAspectRatio();
+
 }
 #endif // !BALL_H
 

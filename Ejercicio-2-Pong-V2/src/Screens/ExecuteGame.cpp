@@ -21,10 +21,14 @@ void ExecuteGame()
 
 	// Main game loop
 	//--------------------------------------------------------------------------------------
+	InitAudioDevice();
 	InitRecColor();
 	loadPalettesTextures();
+	BallObj::LoadColisionSound();
 	BallObj::InitBall();
+	LoadMusic();
 	InitPowerUp();
+	
 
 	while (!WindowShouldClose() || IsKeyDown(KEY_ESCAPE))
 	{
@@ -42,6 +46,9 @@ void ExecuteGame()
 		}
 
 	}
+	UnloadMyTextures();
+	BallObj::UnloadMySound();
+	UnloadMyMusic();
 	CloseWindow();
 	
 }

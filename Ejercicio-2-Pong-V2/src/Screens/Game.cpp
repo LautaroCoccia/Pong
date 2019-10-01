@@ -14,7 +14,20 @@ static void SetGameAspectRatio();
 static void CheckColisionBallPlayers();
 static void CheckColisionBallLargePalettePowerUp();
 static void CheckColisionBallLittleBallPowerUp();
+const float musicStreamMenu = 0.2;
+Music music;
 
+
+void LoadMusic()
+{
+	music = LoadMusicStream("sounds/Music.ogg");
+	SetMusicVolume( music, musicStreamMenu);
+	PlayMusicStream(music);
+}
+void UnloadMyMusic()
+{
+	UnloadMusicStream(music);
+}
 void RunGame()
 {
 	UpdateGame();
@@ -23,6 +36,7 @@ void RunGame()
 
 static void UpdateGame()
 {
+	UpdateMusicStream(music);
 	CheckPlayerMovement();
 	BallObj::CheckBallWallsLimit();
 	CheckColisionBallPlayers();
@@ -61,7 +75,7 @@ static void CheckColisionBallPlayers()
 		BallObj::checkColission = false;
 		BallObj::ball.ballColor = boxP1.color;
 		BallObj::ball.ballSpeed.x *= BallObj::increaseMovementX;
-
+		PlaySound(BallObj::colisionSound);
 	}
 
 	if (CheckCollisionCircleRec(BallObj::ball.ballPosition, BallObj::ball.ballRadius, boxP2) && BallObj::checkColission == false)
@@ -69,6 +83,7 @@ static void CheckColisionBallPlayers()
 		BallObj::ball.ballSpeed.x *= BallObj::increaseMovementX;
 		BallObj::checkColission = true;
 		BallObj::ball.ballColor = boxP2.color;
+		PlaySound(BallObj::colisionSound);
 	}
 	BallObj::ball.ballPosition.x += BallObj::ball.ballSpeed.x * GetFrameTime();
 	BallObj::ball.ballPosition.y += BallObj::ball.ballSpeed.y * GetFrameTime();

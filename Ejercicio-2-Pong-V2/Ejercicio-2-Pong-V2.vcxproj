@@ -106,7 +106,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Ejercicio-2-Pong-V2\src\Objects;$(SolutionDir)Ejercicio-2-Pong-V2\src\Screens;$(SolutionDir)\Librerias\raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Ejercicio-2-Pong-V2\textures;$(SolutionDir)Ejercicio-2-Pong-V2\sounds;$(SolutionDir)\Ejercicio-2-Pong-V2\src\Objects;$(SolutionDir)Ejercicio-2-Pong-V2\src\Screens;$(SolutionDir)\Librerias\raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -131,7 +131,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Ejercicio-2-Pong-V2\Textures;$(SolutionDir)\Ejercicio-2-Pong-V2\src\Objects;$(SolutionDir)Ejercicio-2-Pong-V2\src\Screens;$(SolutionDir)\Librerias\raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Ejercicio-2-Pong-V2\textures;$(SolutionDir)Ejercicio-2-Pong-V2\sounds;$(SolutionDir)\Ejercicio-2-Pong-V2\src\Objects;$(SolutionDir)Ejercicio-2-Pong-V2\src\Screens;$(SolutionDir)\Librerias\raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

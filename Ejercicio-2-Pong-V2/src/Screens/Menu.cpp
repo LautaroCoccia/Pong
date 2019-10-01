@@ -18,8 +18,10 @@ static void DrawMenu()
 {
 	ClearBackground(BLACK);
 	DrawText("PONG", 360, 50, 20, RAYWHITE);
-	DrawText("PRESS ENTER", 310, 125, 20, RAYWHITE);
-	DrawText("SELECT BAR COLOR", 285, 100, 20, RAYWHITE);
+	
+	DrawText("SELECT BAR COLOR USING 'A' 'D' OR ARROWS", 175, 100, 20, RAYWHITE);
+
+	DrawText("PRESS ENTER", 310, 130, 20, RAYWHITE);
 }
 static void CheckColorInput()
 {

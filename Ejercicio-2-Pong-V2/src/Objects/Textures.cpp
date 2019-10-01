@@ -7,10 +7,11 @@ static Texture2D rightPalette;
 static Texture2D leftPalette;
 void loadPalettesTextures()
 {
-	rightPalette = LoadTexture("RightPalette.png");
-	leftPalette = LoadTexture("LeftPalette.png");
+	rightPalette = LoadTexture("textures/RightPalette.png");
+	leftPalette = LoadTexture("textures/LeftPalette.png");
 	InitPalettesTextures();
 }
+
 void DrawPalettesTextures()
 {
 	DrawTexture(rightPalette, static_cast<int>(boxP1.x), static_cast<int>(boxP1.y), boxP1.color);
@@ -18,7 +19,7 @@ void DrawPalettesTextures()
 }
 void LoadBallTexture()
 {
-	ballTexture = LoadTexture("BALL.png");
+	ballTexture = LoadTexture("textures/BALL.png");
 	InitBallTextures();
 }
 void DrawBallTexture()

@@ -5,19 +5,28 @@
 namespace BallObj
 {
 	Ball ball;
+	Sound colisionSound;
 	bool checkColission = false;
 	const float ballMovementY = 375.0f;
 	const float ballMovementX = 500.0f;
 	const float changeDirectionY = -1.0f;
 	const float increaseMovementX = -1.03f;
 
+	
 	void InitBall()
 	{
 		LoadBallTexture();
 		ball.ballPosition = { halfScreenWidth,  halfScreenHeight };
 		ball.ballSpeed = { ball.ballMovementX, ball.ballMovementY };
 	}
-
+	void LoadColisionSound()
+	{
+		colisionSound = LoadSound("sounds/ColisionSound.wav");
+	}
+	void UnloadMySound()
+	{
+		UnloadSound(colisionSound);
+	}
 	void CheckBallWallsLimit()
 	{
 		// Check ball-walls limit
