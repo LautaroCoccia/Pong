@@ -21,7 +21,7 @@ namespace BallObj
 	}
 	void LoadColisionSound()
 	{
-		colisionSound = LoadSound("sounds/ColisionSound.wav");
+		colisionSound = LoadSound("assets/sounds/ColisionSound.wav");
 	}
 	void UnloadMySound()
 	{

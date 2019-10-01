@@ -14,14 +14,14 @@ static void SetGameAspectRatio();
 static void CheckColisionBallPlayers();
 static void CheckColisionBallLargePalettePowerUp();
 static void CheckColisionBallLittleBallPowerUp();
-const float musicStreamMenu = 0.2;
+const float musicStreamMenu = 0.2f;
 Music music;
 
 
 void LoadMusic()
 {
-	music = LoadMusicStream("sounds/Music.ogg");
-	SetMusicVolume( music, musicStreamMenu);
+	music = LoadMusicStream("assets/sounds/Music.ogg");
+	SetMusicVolume(music, musicStreamMenu);
 	PlayMusicStream(music);
 }
 void UnloadMyMusic()

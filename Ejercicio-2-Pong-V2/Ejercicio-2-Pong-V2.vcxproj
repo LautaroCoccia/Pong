@@ -106,7 +106,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Ejercicio-2-Pong-V2\textures;$(SolutionDir)Ejercicio-2-Pong-V2\sounds;$(SolutionDir)\Ejercicio-2-Pong-V2\src\Objects;$(SolutionDir)Ejercicio-2-Pong-V2\src\Screens;$(SolutionDir)\Librerias\raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Ejercicio-2-Pong-V2\resources\assets;$(SolutionDir)Ejercicio-2-Pong-V2\src\Objects;$(SolutionDir)Ejercicio-2-Pong-V2\src\Screens;$(SolutionDir)Librerias\raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -114,6 +114,16 @@
       <AdditionalDependencies>opengl32.lib;raylib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>copy $(SolutionDir)Librerias\raylib-2.5.0-Win32-msvc15\bin $(OutDir) /y
+
+xcopy "$(SolutionDir)Ejercicio-2-Pong-V2\resources" "$(OutDir)" /s /y
+rmdir "$(OutDir)raw"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -131,7 +141,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Ejercicio-2-Pong-V2\textures;$(SolutionDir)Ejercicio-2-Pong-V2\sounds;$(SolutionDir)\Ejercicio-2-Pong-V2\src\Objects;$(SolutionDir)Ejercicio-2-Pong-V2\src\Screens;$(SolutionDir)\Librerias\raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Ejercicio-2-Pong-V2\resources\assets;$(SolutionDir)Ejercicio-2-Pong-V2\src\Objects;$(SolutionDir)Ejercicio-2-Pong-V2\src\Screens;$(SolutionDir)Librerias\raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -141,6 +151,16 @@
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>copy $(SolutionDir)Librerias\raylib-2.5.0-Win32-msvc15\bin $(OutDir) /y
+
+xcopy "$(SolutionDir)Ejercicio-2-Pong-V2\resources" "$(OutDir)" /s /y
+rmdir "$(OutDir)raw"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
